@@ -32,9 +32,11 @@ class ViewController: UIViewController {
         
         self.view.addSubview(button)
         
+        button.addTarget(self, action:"incrementCount", forControlEvents: UIControlEvents.TouchUpInside)
+        
     }
     
-    func incremenetCount(){
+    func incrementCount(){
         self.count++
         self.label.text = "\(self.count)"
     }
