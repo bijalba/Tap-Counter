@@ -11,11 +11,16 @@ import UIKit
 class ViewController: UIViewController {
     
     var count = 0
-    var label:UILabel!
+    @IBOutlet var label:UILabel!
     var label2:UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
+        
+       /* Old hand-done code 
         
         //Label
         var label = UILabel()
@@ -52,14 +57,14 @@ class ViewController: UIViewController {
         
         self.view.addSubview(button2)
         
-        button2.addTarget(self, action:"decrementCount", forControlEvents: UIControlEvents.TouchUpInside)
+        button2.addTarget(self, action:"decrementCount", forControlEvents: UIControlEvents.TouchUpInside) */
         
     }
     
-    func incrementCount(){
+    @IBAction func incrementCount(){
         self.count++
         self.label.text = "\(self.count)"
-        self.label2.text = "\(self.count)"
+       // self.label2.text = "\(self.count)"
         self.view.backgroundColor = UIColor.redColor()
     }
     
